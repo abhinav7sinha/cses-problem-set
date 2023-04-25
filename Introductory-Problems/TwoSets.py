@@ -22,35 +22,6 @@ Approach 2:
 
 dp = {}
 
-def helperOLD(curr, curr_sum, i):
-    global n, target, dp
-    if curr_sum == target:
-        return curr
-    if curr_sum>target:
-        return False
-    if i==n+1:
-        return False
-    if curr_sum in dp:
-        if i in dp[curr_sum]:
-            return dp[curr_sum][i]
-    else:
-        dp[curr_sum]={}
-    # DO
-    curr.append(i)
-    curr_sum += i
-    # OP
-    t = helper(curr, curr_sum, i+1)
-    if t:
-        dp[curr_sum-i][i] = t
-        return t
-    # UNDO
-    curr.pop()
-    curr_sum -= i
-    # OP
-    t = helper(curr, curr_sum, i+1)
-    dp[curr_sum][i] = t
-    return dp[curr_sum][i]
-
 def helper():
     global n, target
     curr = []
