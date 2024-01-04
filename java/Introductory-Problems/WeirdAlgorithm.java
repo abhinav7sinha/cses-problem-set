@@ -14,5 +14,6 @@ public class WeirdAlgorithm {
 			}
 			System.out.print(n+" ");
 		}
+		s.close();
 	}
 }
