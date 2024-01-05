@@ -54,21 +54,16 @@ public class MaximumSubarraySum {
     public static void main(String[] args) throws IOException{
         Reader r = new Reader();
         int n = r.nextInt();
-        // int[] nums = new int[n];
 
         // kadane's algo
-        int max = Integer.MIN_VALUE;
-        int cur = 0;
+        long max = Integer.MIN_VALUE;
+        long cur = 0;
         for(int i=0; i<n; i++) {
             int num = r.nextInt();
             cur += num;
             max = Math.max(max, cur);
             if (cur<0) cur=0;
         }
-
         System.out.println(max);
-        
-
-
     }
 }
