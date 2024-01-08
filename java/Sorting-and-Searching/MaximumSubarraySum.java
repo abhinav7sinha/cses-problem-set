@@ -1,6 +1,5 @@
 import java.io.DataInputStream;
 import java.io.IOException;
-import java.util.Arrays;
 
 public class MaximumSubarraySum {
     static class Reader {
